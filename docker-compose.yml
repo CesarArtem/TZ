@@ -1,6 +1,17 @@
 version: '3'
 
 services:
+
+  api:
+    restart: always
+    build: ./backend
+    expose:
+      - "3003"
+    ports:
+      - "3003:3003"
+    depends_on:
+      - postgres
+
   postgres:
     restart: always
     expose:
@@ -13,14 +24,14 @@ services:
         POSTGRES_USER: postgres
         POSTGRES_PASSWORD: password1234
         POSTGRES_DB: TZ
-    
+    volumes:
+      - postgres_data:/var/lib/postgresql
+
   adminer:
     restart: always
     image: adminer
     ports:
       - 8888:8080
-    depends_on:
-      - postgres
 
 volumes:
   postgres_data:
