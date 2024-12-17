@@ -1,0 +1,40 @@
+form {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет полям переноситься на следующую строку */
+    gap: 20px; /* Отступ между полями */
+    margin: 20px; /* Отступ вокруг формы */
+}
+
+.formRow {
+    flex: 1 1 calc(50% - 20px); /* Два поля в ряд с учетом отступов */
+    min-width: 250px; /* Минимальная ширина для полей */
+}
+
+.formLabel {
+    display: block; /* Отображение меток как блочных элементов */
+    margin-bottom: 5px; /* Отступ снизу для меток */
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+select {
+    width: 100%; /* Поля занимают всю ширину контейнера */
+    padding: 10px; /* Отступ внутри полей */
+    border: 1px solid #ccc; /* Граница полей */
+    border-radius: 4px; /* Закругленные углы */
+    box-sizing: border-box; /* Учитываем отступы и границы в ширине */
+}
+
+.buttonForSubmit {
+    padding: 10px 15px; /* Отступы для кнопки */
+    background-color: #007bff; /* Цвет фона кнопки */
+    color: white; /* Цвет текста кнопки */
+    border: none; /* Без границы */
+    border-radius: 4px; /* Закругленные углы */
+    cursor: pointer; /* Указатель при наведении */
+}
+
+.buttonForSubmit:hover {
+    background-color: #0056b3; /* Темный цвет при наведении */
+}
