@@ -3,7 +3,6 @@ import type { GridReadyEvent, IDatasource } from "ag-grid-community";
 import type { CustomCellRendererProps } from "ag-grid-react";
 import {InfiniteRowModelModule, ModuleRegistry, ValidationModule, RowSelectionModule} from "ag-grid-community";
 import { AgGridReact } from 'ag-grid-react';
-import DataTableActions from '../DataTableActions/datatableactions';
 import EmployeeForm from "../Form/EmployeeForm";
 
 ModuleRegistry.registerModules([InfiniteRowModelModule, ValidationModule, RowSelectionModule]);

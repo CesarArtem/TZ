@@ -27,6 +27,14 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql
 
+  react-app:
+    restart: always
+    build: ./frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - api
+
   adminer:
     restart: always
     image: adminer
